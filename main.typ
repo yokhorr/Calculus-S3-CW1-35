@@ -116,8 +116,6 @@ $ lim_(x -> x_0) lim_(y -> y_0) f(x, y) quad "и" quad lim_(y -> y_0) lim_(x -> 
 
 #theorem(title: [(связь двойного и повторных пределов)], body: [
 Пусть существует двойной предел $lim_(x -> x_0 \ y -> y_0) f(x, y) = a$ и для каждого $x$ из некоторой проколотой окрестности точки $x_0$ существует $g(x) = lim_(y -> y_0) f(x, y)$. Тогда повторный предел $lim_(x -> x_0) g(x)$ существует и равен $a$.
-], proof: [
-Пусть $epsilon > 0$. По определению двойного предела найдётся $delta > 0$ такое, что $abs(f(x, y) - a) < epsilon$ при $0 < rho((x, y), (x_0, y_0)) < delta$. Возьмём $x$ с $0 < abs(x - x_0) < delta/2$. Для всех $y$ с $0 < abs(y - y_0) < delta/2$ расстояние от $(x, y)$ до $(x_0, y_0)$ меньше $delta$ и положительно, поэтому $abs(f(x, y) - a) < epsilon$. Переходя к пределу при $y -> y_0$, получаем $abs(g(x) - a) <= epsilon$. Это и означает, что $g(x) -> a$ при $x -> x_0$.
 ])
 
 #corollary(body: [
@@ -300,8 +298,6 @@ $ (partial f)/(partial x) = A, quad (partial f)/(partial y) = B, $
 то есть
 $ dd(f) = f'_x dd(x) + f'_y dd(y). $
 Для функции $f(x_1, dots, x_n)$ аналогично: $dd(f) = f'_(x_1) dd(x_1) + dots + f'_(x_n) dd(x_n)$.
-], proof: [
-Положим $Delta y = 0$. Тогда $Delta f = A Delta x + o(abs(Delta x))$, откуда $(Delta f)/(Delta x) = A + o(1)$ и $f'_x = lim_(Delta x -> 0) (Delta f)/(Delta x) = A$. Для $B$ рассуждение такое же при $Delta x = 0$.
 ])
 
 #theorem(title: [(достаточное условие дифференцируемости)], body: [
@@ -615,8 +611,6 @@ $ (partial f)/(partial arrow(h)) = chevron.l grad f, arrow(h) chevron.r = sum_(k
 #theorem(title: [(факты о градиенте)], body: [
 + $max_(arrow(h)) (partial f)/(partial arrow(h)) = norm(grad f)$.
 + Если $grad f != 0$, то $(partial f)/(partial arrow(h))$ достигает наибольшего значения при $arrow(h) = grad f/norm(grad f)$.
-], proof: [
-Так как $chevron.l grad f, arrow(h) chevron.r = norm(grad f) dot norm(arrow(h)) cos theta = norm(grad f) cos theta$, где $theta$ — угол между $grad f$ и $arrow(h)$, значение не превосходит $norm(grad f)$ и равно ему при $theta = 0$, то есть когда $arrow(h)$ сонаправлен с $grad f$.
 ])
 
 #remark(title: [(схема решения)], body: [

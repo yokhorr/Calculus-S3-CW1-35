@@ -254,6 +254,11 @@
 
 // ---------------------------------------------------------------------------
 // Добавлено для конспекта: русские обозначения функций и блоки для задач.
+// Пределы у lim, max, sum всегда строго снизу/сверху (как \limits в LaTeX),
+// а не справа в виде индексов: lim_(x -> 0), sum_(i=1)^n, max_(h).
+#let lim = math.limits(math.lim)
+#let max = math.limits(math.max)
+#let sum = math.limits(sym.sum)
 #let arctg = math.op("arctg")
 #let tg = math.op("tg")
 #let grad = math.op("grad")
